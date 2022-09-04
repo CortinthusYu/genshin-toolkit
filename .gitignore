@@ -1,0 +1,7 @@
+*.json
+export
+dist
+build
+*.spec
+*.pyc
+genshindata
