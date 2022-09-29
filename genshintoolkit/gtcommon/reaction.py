@@ -7,6 +7,7 @@ factor_amping={
     EnumAmpingReaction.melt_pyro:2
 }
 
+# todo: get curve from genshindata
 curve_LM_transformative=[0 for i in range(100)]
 curve_LM_transformative[90]=723
 
@@ -36,4 +37,4 @@ def reaction_transformative(reaction:EnumTransformativeReaction,elemental_master
     return curve_LM_transformative[level]*factor_transformative[reaction]*(1+16*elemental_mastery/(2000+elemental_mastery)+reaction_bonus)
 
 def reaction_catalyze(reaction:EnumCatalyzeReaction,elemental_mastery:int=0,level:int=90,reaction_bonus=0):
-    return curve_LM_transformative[level]*factor_catalyze[reaction]*(1+5*elemental_mastery/(1200+elemental_mastery)+reaction_bonus)
+    return curve_LM_catalyze[level]*factor_catalyze[reaction]*(1+5*elemental_mastery/(1200+elemental_mastery)+reaction_bonus)

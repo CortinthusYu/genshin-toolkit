@@ -5,3 +5,4 @@ build
 *.spec
 *.pyc
 genshindata
+*.png
